@@ -14,7 +14,7 @@ st.subheader("Auteur: Professeur M. Diop")
 
     # Définition de la fonction pour télécharger les données
 
-data = pd.read_csv("https://drive.google.com/file/d/1rIOP3BehV-vw-NijVmqTAc9ZD1PBeIjw/view?usp=sharing")
+data = pd.read_csv("Expresso_churn_dataset.csv")
 
 
 # Afficher des informations générales sur l'ensemble de données
