@@ -1,0 +1,8 @@
+__pycache__/
+.vscode/
+.idea/
+venv/
+*.pyc
+*.pyo
+.DS_Store
+Expresso_churn_dataset.csv
