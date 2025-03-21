@@ -14,7 +14,19 @@ st.subheader("Auteur: Professeur M. Diop")
 
     # Définition de la fonction pour télécharger les données
 
-data = pd.read_csv("Expresso_churn_dataset.csv")
+#data = pd.read_csv("Expresso_churn_dataset.csv")
+
+# URL du fichier (ex: Google Drive ou autre)
+file_url = "https://drive.google.com/file/d/1rIOP3BehV-vw-NijVmqTAc9ZD1PBeIjw/view?usp=drive_link"
+
+@st.cache_data
+def load_data(url):
+    response = requests.get(url)
+    with open("data.csv", "wb") as f:
+        f.write(response.content)
+    return pd.read_csv("data.csv")
+
+df = load_data(file_url)
 
 
 # Afficher des informations générales sur l'ensemble de données
