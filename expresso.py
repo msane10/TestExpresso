@@ -26,7 +26,7 @@ def load_data(url):
         f.write(response.content)
     return pd.read_csv("data.csv")
 
-df = load_data(file_url)
+data = load_data(file_url)
 
 
 # Afficher des informations générales sur l'ensemble de données
