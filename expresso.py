@@ -22,9 +22,9 @@ file_url = "https://drive.google.com/file/d/1rIOP3BehV-vw-NijVmqTAc9ZD1PBeIjw/vi
 @st.cache_data
 def load_data(url):
     response = requests.get(url)
-    with open("data.csv", "wb") as f:
+    with open("Expresso_churn_dataset.csv", "wb") as f:
         f.write(response.content)
-    return pd.read_csv("data.csv")
+    return pd.read_csv("Expresso_churn_dataset.csv")
 
 data = load_data(file_url)
 
